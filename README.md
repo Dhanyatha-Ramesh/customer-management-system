@@ -19,6 +19,23 @@ Copy code
 cd CustomerManagementSystem
 npm install
 
+Database Setup
+--------------
+
+To set up the database for the Customer Management System using Entity Framework Core migrations, follow these steps:
+
+1. Ensure that you have a local instance of SQL Server installed and running.
+
+2. Open your command-line interface and navigate to the root directory of the backend project.
+
+3. Run the following command to create a new migration that represents the initial state of the database schema:
+
+   ```bash
+   dotnet ef migrations add InitialCreate
+   
+4. After creating the migration, run the following command to apply the migration and update the database:
+   dotnet ef database update
+
 Run the Application:
 
 sql
