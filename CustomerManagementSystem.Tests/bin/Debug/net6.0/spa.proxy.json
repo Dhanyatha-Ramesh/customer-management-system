@@ -1,0 +1,8 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:44456",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "C:\\Users\\dhanyatha.ramesh\\source\\CustomerManagementSystem\\CustomerManagementSystem\\ClientApp\\",
+"MaxTimeoutInSeconds": "120"
+}
+}
