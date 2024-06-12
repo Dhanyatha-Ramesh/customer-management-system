@@ -1,4 +1,5 @@
 Customer Management System
+
 Overview
 The Customer Management System is a web application designed to manage customer data efficiently. It provides functionalities to add, edit, and delete customer records, as well as view a list of existing customers.
 
@@ -9,20 +10,58 @@ Clone the Repository:
 
 bash
 Copy code
-git clone <repository-url>
+git clone (https://github.com/Dhanyatha-Ramesh/customer-management-system.git)
+
 Install Dependencies:
 
 bash
 Copy code
 cd CustomerManagementSystem
 npm install
+
+Database Setup
+--------------
+
+To set up the database for the Customer Management System using Entity Framework Core migrations, follow these steps:
+
+1. Ensure that you have a local instance of SQL Server installed and running.
+
+2. Open your command-line interface and navigate to the root directory of the backend project.
+
+3. Run the following command to create a new migration that represents the initial state of the database schema:
+
+    ```bash
+   dotnet tool install --global dotnet-ef
+
+   
+Navigate to the correct directory: Ensure that you are running the dotnet ef migrations add command from the directory that contains .NET Core project.  
+.../CustomerManagementSystem/CustomerManagementSystem
+
+   ```bash
+   dotnet ef migrations add InitialCreate
+   
+4. After creating the migration, run the following command to apply the migration and update the database:
+
+   ```bash
+   dotnet ef database update
+
 Run the Application:
 
 sql
 Copy code
 npm start
-Access the Application:
-Open your web browser and navigate to https://localhost:7190 to access the Customer Management System.
+
+Accessing the Application
+-------------------------
+
+Before accessing the Customer Management System, ensure that the backend server is running. If you haven't set up the backend server yet, please follow the setup instructions provided in the backend repository.
+
+Once the backend server is running, you can access the application by following these steps:
+
+1. Open your web browser.
+2. Navigate to https://localhost:7190 to access the Customer Management System.
+
+Note: If there are any additional configurations or environment variables required for the backend server, make sure to set them up as per the backend setup instructions.
 
 API Endpoints
 The Customer Management System communicates with a backend server via RESTful API endpoints. Below are the available endpoints:
