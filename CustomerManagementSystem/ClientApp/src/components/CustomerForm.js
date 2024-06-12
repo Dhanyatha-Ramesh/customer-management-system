@@ -52,28 +52,28 @@ const CustomerForm = () => {
             <h2>{id ? 'Edit' : 'Add'} Customer</h2>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                    <label htmlFor="firstName" className="form-label">First Name</label>
-                    <input type="text" className="form-control col-md-4" id="firstName" name="firstName" value={customer.firstName} onChange={handleChange} />
+                    <label htmlFor="firstName" className="form-label">First Name<span className="text-danger">*</span></label>
+                    <input type="text" className="form-control col-md-4" id="firstName" name="firstName" value={customer.firstName} onChange={handleChange} style={{ width: '50%' }} />
                     {errors.firstName && <div className="text-danger">{errors.firstName}</div>}
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="lastName" className="form-label">Last Name</label>
-                    <input type="text" className="form-control col-md-4" id="lastName" name="lastName" value={customer.lastName} onChange={handleChange} />
+                    <label htmlFor="lastName" className="form-label">Last Name<span className="text-danger">*</span></label>
+                    <input type="text" className="form-control col-md-4" id="lastName" name="lastName" value={customer.lastName} onChange={handleChange} style={{ width: '50%' }} />
                     {errors.lastName && <div className="text-danger">{errors.lastName}</div>}
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="email" className="form-label">Email</label>
-                    <input type="email" className="form-control col-md-4" id="email" name="email" value={customer.email} onChange={handleChange} />
+                    <label htmlFor="email" className="form-label">Email<span className="text-danger">*</span></label>
+                    <input type="email" className="form-control col-md-4" id="email" name="email" value={customer.email} onChange={handleChange} style={{ width: '50%' }} />
                     {errors.email && <div className="text-danger">{errors.email}</div>}
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="phone" className="form-label">Phone</label>
-                    <input type="text" className="form-control col-md-4" id="phone" name="phone" value={customer.phone} onChange={handleChange} />
+                    <label htmlFor="phone" className="form-label">Phone<span className="text-danger">*</span></label>
+                    <input type="text" className="form-control col-md-4" id="phone" name="phone" value={customer.phone} onChange={handleChange} style={{ width: '50%' }} />
                     {errors.phone && <div className="text-danger">{errors.phone}</div>}
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="address" className="form-label">Address</label>
-                    <input type="text" className="form-control col-md-4" id="address" name="address" value={customer.address} onChange={handleChange} />
+                    <label htmlFor="address" className="form-label">Address<span className="text-danger">*</span></label>
+                    <input type="text" className="form-control col-md-4" id="address" name="address" value={customer.address} onChange={handleChange} style={{ width: '50%' }} />
                     {errors.address && <div className="text-danger">{errors.address}</div>}
                 </div>
                 <button type="submit" className="btn btn-primary">Save</button>
