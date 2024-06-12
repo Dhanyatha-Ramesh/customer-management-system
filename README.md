@@ -30,10 +30,19 @@ To set up the database for the Customer Management System using Entity Framework
 
 3. Run the following command to create a new migration that represents the initial state of the database schema:
 
+    ```bash
+   dotnet tool install --global dotnet-ef
+
+   
+Navigate to the correct directory: Ensure that you are running the dotnet ef migrations add command from the directory that contains .NET Core project.  
+.../CustomerManagementSystem/CustomerManagementSystem
+
    ```bash
    dotnet ef migrations add InitialCreate
    
 4. After creating the migration, run the following command to apply the migration and update the database:
+
+   ```bash
    dotnet ef database update
 
 Run the Application:
